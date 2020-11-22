@@ -6,22 +6,6 @@ from firebase_admin import credentials, initialize_app, storage, firestore
 from backend.model.tf_hub import style_transfer, download_image, save_url_to_database
 from backend.model import nst
 from uuid import uuid4
-from dotenv import load_dotenv
-
-load_dotenv()
-
-# print("hello ", {
-#     "type": os.getenv("FIREBASE_TYPE"),
-#     "project_id": os.getenv("FIREBASE_PROJECT_ID"),
-#     "private_key_id": os.getenv("FIREBASE_PRIVATE_KEY_ID"),
-#     "private_key": os.getenv("FIREBASE_PRIVATE_KEY"),
-#     "client_email": os.getenv("FIREBASE_CLIENT_EMAIL"),
-#     "client_id": os.getenv("FIREBASE_CLIENT_ID"),
-#     "auth_uri": os.getenv("FIREBASE_AUTH_URI"),
-#     "token_uri": os.getenv("FIREBASE_TOKEN_URI"),
-#     "auth_provider_x509_cert_url": os.getenv("FIREBASE_AUTH_PROVIDER_X509_CERT_URL"),
-#     "client_x509_cert_url": os.getenv("FIREBASE_CLIENT_X509_CERT_UR")
-# })
 
 # Initialize Flask application.
 app=Flask(__name__)
@@ -44,24 +28,11 @@ if not os.path.exists(tmp_folder):
 keep_local_img = False    # Set this True to keep images in the tmp folder.
 
 # Initialize firebase application.
-cred = credentials.Certificate({
-  "type": "service_account",
-  "project_id": "pycharm-neuro",
-  "private_key_id": "1eef4ca86b56e4b049758709dea3a1d7848ee6b5",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDFQlMay/GfbBma\nXa4POF5exH0P24Y+TgwqBCW8WSn6xBohCN12+GcFaiFBd81HkPv03V9qulQenud/\nRPquaucnm4yMCObzkYFF3kTv9eOu3o3T4qhQ0TwRSW7H9JLZQ9aC2LpvgC6iyBif\nDMKFRNiEHcA/aV4LZIYVqqC4oYA1TktX41i8rrN+IdOPg6mhYPiDBfRPZ/3NR8Rl\ncOfk2Iwt6BC9lZKHxaJ//Ta7QKiEplsAmkRTEm23dUOqsFi2c4S6SJQLG0ufA8We\njkMW9XO7IueEatnfp7vN5+4k6KrGp5fS0mEASuoDP8zh2pOA7MVxSo2Xgkm9DXlT\nw1URNpv7AgMBAAECggEAOqMcJB+S7FKMi9QkLTcS6nXbPU8C6Vt3BzhjZUlWDsqj\nf8VsW/S8XyIsz5LGzWreUuxJdGb+IXoYE7+UCywRGbeGAIyW5rmOpY/Mi05bR7y1\niVJbuWZxRiw/h6X+zyH4zr2RMhr3AgGcPA9ldYtBF4jmgJMYVyejKiamDyxG+dEO\nBg7fNGBwhqMXi0VEG3DpvksH2cubj/dqbUQkCXBDZ3WTZVa/1++4ECHP5uJjFfIr\nkaTdNU6l2Xqj44MIpMz+x+ESdYJ4on8qnxddl2BOgWFCm3P9Cp8GmHGlLGuwPvFU\n3XU2XQaHprkSnSrR/KzI05BrKkhKp5gkxf/hw9yUHQKBgQDuIsNeJbz/KtY92GLt\nMxqrXtTkf3zEDARXSEJr4YoDVmmwD3tmtHMx55rfnLRkTIWIE5Hc7obBRkEbL6pj\nT1gjvdrqfwtKUZckjhYE69s+LIGeX/vyaIfLFiZgL3x+rjOTJGPvGMcQYsy1KaiH\nfKV5BmvRaRNoS/PiFfEMf7z69wKBgQDUDo1F4DbzUG3VZ0ZGJGx8VweAo+lKCrT2\niWhCjeXCa9h1eEGktD5XV0EI6qbPn8+zJct6pe3MrLLB0SsAB3ehwhDl2T0VD1L6\nHYMRgAMdtFIPjp17OWOV7DeQEs6RQdvChVbrPgB0RqgLjf6+ZRNhM5B3Wr55eWuw\nWfd5g5nCHQKBgHtGF6i3FH1rKXjeeWedGuM3tjGLJYU/S0f7qha6rH1J0HBJs3HZ\nXACrimrTbja1vjJRHyMlfzCyM6XlKOk7+76U26ykk62nSvyraQ6nIdmvpHHd8kjs\nf89L6hXEv0e82goDvo/ZXcNHwfzOUeXBSs+52TqQkHFfUCLrhNsZjTTFAoGBAKYc\nNAv9g+37Hd5iBMljNNv9rHHXdCI82t6YamRgFQ/EPQ5fwkQLsR3nypj6fur7C88Q\nlyEfI3UF/w0WFXHzZ4H9rBDwqAl8NIqaXZZyyX4WR4XKOJBTNzA0lp20Lb3ZchUh\nMCIcMmzjADX06A0qzhCBPPRR0A0F0RaWkuXL8cD9AoGBAKzGelu41zx42b1qQNrc\niuLDNVe1feXcbwM5qadpzrLzGm5Dhmxk8EScT5MSZ0Zr1FpZbs3KgN99tn+qLG8G\n8uitHjNjnCnoZ8rd1dsouTNBXuwsjaL9+Cut8ggwl4dr9LQNJSP1MiRcCHYhpzHo\nRA07ZS1utwRopffyTT1pWzU9\n-----END PRIVATE KEY-----\n",
-  "client_email": "firebase-adminsdk-8sko7@pycharm-neuro.iam.gserviceaccount.com",
-  "client_id": "110138381221953224005",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-8sko7%40pycharm-neuro.iam.gserviceaccount.com"
-})
-
-storage_url = 'pycharm-neuro.appspot.com'
+cred = credentials.Certificate(os.path.join(app.root_path, 'keyfiles', 'firebase_credential.json'))
+storage_url = 'mlh-neuro-art.appspot.com'
 initialize_app(cred, {'storageBucket': storage_url})
 firestore_client = firestore.client()
 image_collection = firestore_client.collection('images')
-
 
 @app.route('/nst_post',methods=['POST'])
 def nst_post():
