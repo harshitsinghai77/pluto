@@ -86,9 +86,9 @@ Here is a working live demo :
 
 ## Team
 
-|                                                                                                                                                   Harshit Singhai                                                                                                                                                    |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [<img src="https://avatars1.githubusercontent.com/u/30886142?s=460&u=51b449e5572025e788defb66674d2a38b1d6092b&v=4" width="100px;"/>](https://github.com/harshitsinghai77)<br />[🌍](https://fictionally-irrelevant.vercel.app/) [💻](https://github.com/knoxd8256) [🤝](https://www.linkedin.com/in/harshitsinghai/) |
+|                                                                                                                                                       Harshit Singhai                                                                                                                                                       |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [<img src="https://avatars1.githubusercontent.com/u/30886142?s=460&u=51b449e5572025e788defb66674d2a38b1d6092b&v=4" width="100px;"/>](https://github.com/harshitsinghai77)<br />[🌍](https://fictionally-irrelevant.vercel.app/) [💻](https://github.com/harshitsinghai77) [🤝](https://www.linkedin.com/in/harshitsinghai/) |
 
 ## License
 
