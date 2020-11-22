@@ -51,3 +51,4 @@ flask==1.1.2
 Flask-Cors==3.0.9
 tensorflow_hub
 gunicorn
+python-dotenv

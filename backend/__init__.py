@@ -6,6 +6,22 @@ from firebase_admin import credentials, initialize_app, storage, firestore
 from backend.model.tf_hub import style_transfer, download_image, save_url_to_database
 from backend.model import nst
 from uuid import uuid4
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# print("hello ", {
+#     "type": os.getenv("FIREBASE_TYPE"),
+#     "project_id": os.getenv("FIREBASE_PROJECT_ID"),
+#     "private_key_id": os.getenv("FIREBASE_PRIVATE_KEY_ID"),
+#     "private_key": os.getenv("FIREBASE_PRIVATE_KEY"),
+#     "client_email": os.getenv("FIREBASE_CLIENT_EMAIL"),
+#     "client_id": os.getenv("FIREBASE_CLIENT_ID"),
+#     "auth_uri": os.getenv("FIREBASE_AUTH_URI"),
+#     "token_uri": os.getenv("FIREBASE_TOKEN_URI"),
+#     "auth_provider_x509_cert_url": os.getenv("FIREBASE_AUTH_PROVIDER_X509_CERT_URL"),
+#     "client_x509_cert_url": os.getenv("FIREBASE_CLIENT_X509_CERT_UR")
+# })
 
 # Initialize Flask application.
 app=Flask(__name__)
@@ -28,7 +44,19 @@ if not os.path.exists(tmp_folder):
 keep_local_img = False    # Set this True to keep images in the tmp folder.
 
 # Initialize firebase application.
-cred = credentials.Certificate(os.path.join(app.root_path, 'keyfiles', 'firebase_credential.json'))
+cred = credentials.Certificate({
+    "type": os.getenv("FIREBASE_TYPE"),
+    "project_id": os.getenv("FIREBASE_PROJECT_ID"),
+    "private_key_id": os.getenv("FIREBASE_PRIVATE_KEY_ID"),
+    "private_key": os.getenv("FIREBASE_PRIVATE_KEY"),
+    "client_email": os.getenv("FIREBASE_CLIENT_EMAIL"),
+    "client_id": os.getenv("FIREBASE_CLIENT_ID"),
+    "auth_uri": os.getenv("FIREBASE_AUTH_URI"),
+    "token_uri": os.getenv("FIREBASE_TOKEN_URI"),
+    "auth_provider_x509_cert_url": os.getenv("FIREBASE_AUTH_PROVIDER_X509_CERT_URL"),
+    "client_x509_cert_url": os.getenv("FIREBASE_CLIENT_X509_CERT_UR")
+})
+
 storage_url = 'pycharm-neuro.appspot.com'
 initialize_app(cred, {'storageBucket': storage_url})
 firestore_client = firestore.client()
