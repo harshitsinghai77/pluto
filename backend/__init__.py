@@ -212,4 +212,10 @@ def rate():
     return {'success': 'true'}
 
 
+@app.route('/', methods=['GET'])
+def hello_world():
+    # Return a success message.
+    return "Hello World"
+
+
 # style_transfer(hub_folder)
