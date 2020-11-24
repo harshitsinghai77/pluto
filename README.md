@@ -61,9 +61,9 @@ $ npm start
 
 **Disclaimer: By using our service we are consenting to us collecting your image data. Under the spirit of open source we will only be using this data to further improve our algorithm.**
 
-Here is a working live demo :
+Here is a working live demo video :
 
-[![Demo](http://img.youtube.com/vi/OxyWbiOgJbU/0.jpg)](https://www.youtube.com/embed/OxyWbiOgJbU)
+[![Demo](./static/images/video_thumbnail.png)](https://www.youtube.com/watch?v=dFUJv7JqiEE&t=3s&ab_channel=HarshitSinghai)
 
 ## Screenshot
 
