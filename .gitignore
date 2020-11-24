@@ -35,7 +35,11 @@ yarn-debug.log*
 yarn-error.log*
 
 
+backend/static/images/hub/*
+backend/static/images/nst_get/*
 StyleContentModel
 tmp
+hub
+nst_get
 notebooks
 
