@@ -1,7 +1,8 @@
+import { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Hero from "../../components/Hero";
-import { Row, Col, Typography as Typography2, Button } from "antd";
-import { Container, Typography } from "@material-ui/core";
+import { Row, Col } from "antd";
+import { Typography } from "@material-ui/core";
 
 import nst_img from "./../../static/nst_example.png";
 import "./about.css";
@@ -23,12 +24,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Hero
         title="About"
-        subtitle="Neuro Art🎨 uses Machine Learning to style transfer the artist’s 
-          technique.We chose among some of the most representative artists around the world to train our network."
+        subtitle="Pluto 🎨 uses Deep Neural Network to style transfer your image.
+          We chose among some of the most representative artists around the world to train our network."
       />
 
       <div className="about_container">
@@ -59,14 +64,14 @@ function About() {
               This is implemented by optimizing the output image to match the
               content statistics of the content image and the style statistics
               of the style reference image. These statistics are extracted from
-              the images using a convolutional network.
+              the images using a convolutional neural network.
             </Typography>
           </Col>
         </Row>
       </div>
       <Hero
         title="About"
-        subtitle="With help of AI convert your favorite shot into a famous artist’s painting."
+        subtitle="Convert your favorite shot into any famous artistic painting using Pluto's AI."
       />
     </>
   );

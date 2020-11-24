@@ -67,11 +67,23 @@ Here is a working live demo :
 
 [![Demo](http://img.youtube.com/vi/OxyWbiOgJbU/0.jpg)](https://www.youtube.com/embed/OxyWbiOgJbU)
 
-## Site
+## Screenshot
 
-|                                                         Home                                                          |                                                         About                                                          |                                                          Canvas                                                          |
-| :-------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: |
-| <img src="https://raw.githubusercontent.com/MLH-Fellowship/neuro-art/main/assets/home.png" title="Home " width="50%"> | <img src="https://raw.githubusercontent.com/MLH-Fellowship/neuro-art/main/assets/about.png" title="About" width="50%"> | <img src="https://raw.githubusercontent.com/MLH-Fellowship/neuro-art/main/assets/canvas.png" title="Canvas" width="50%"> |
+![Screenshot for Pluto](./static/images/pluto_4.png)
+![Screenshot for Pluto](./static/images/pluto_8.png)
+![Screenshot for Pluto](./static/images/pluto_10.png)
+![Screenshot for Pluto](./static/images/pluto_11.png)
+![Screenshot for Pluto](./static/images/pluto_8.png)
+![Screenshot for Pluto](./static/images/pluto_14.png)
+![Screenshot for Pluto](./static/images/pluto_3.png)
+![Screenshot for Pluto](./static/images/pluto_12.png)
+![Screenshot for Pluto](./static/images/pluto_5.png)
+![Screenshot for Pluto](./static/images/pluto_6.png)
+![Screenshot for Pluto](./static/images/pluto_1.png)
+![Screenshot for Pluto](./static/images/pluto_7.png)
+![Screenshot for Pluto](./static/images/pluto_13.png)
+![Screenshot for Pluto](./static/images/pluto_9.png)
+![Screenshot for Pluto](./static/images/pluto_2.png)
 
 ## Built with
 

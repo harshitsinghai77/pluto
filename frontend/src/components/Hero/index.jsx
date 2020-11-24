@@ -1,4 +1,4 @@
-import { Card, Row, Col, Typography, Button } from "antd";
+import { Card, Row, Col, Typography, Button, Space } from "antd";
 import { Link } from "react-router-dom";
 import "./hero.css";
 
@@ -24,19 +24,22 @@ function Hero(props) {
             <Typography.Title>{title}</Typography.Title>
             <Typography.Title level={3}>{subtitle}</Typography.Title>
 
-            <Link to="/canvas">
-              <Button type="danger" className="link">
-                Get Started
-              </Button>
-            </Link>
+            <Space>
+              <Link to="/canvas">
+                <Button type="danger" className="link">
+                  Get Started
+                </Button>
+              </Link>
 
-            <Button
-              type="primary"
-              href={"https://github.com/MLH-Fellowship/neuro-art"}
-              className="link"
-            >
-              GitHub
-            </Button>
+              <a
+                href="https://github.com/harshitsinghai77/jetBrains-PyChamps-hackathon"
+                target="_blank"
+              >
+                <Button type="primary" className="link">
+                  GitHub
+                </Button>
+              </a>
+            </Space>
           </div>
         </Card>
       </Col>

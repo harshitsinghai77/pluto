@@ -52,7 +52,9 @@ function Navbar() {
             noWrap
             className={classes.toolbarTitle}
           >
-            Neuro Art
+            <Link to="/" href="/">
+              Pluto
+            </Link>
           </Typography>
           <nav>
             <Link

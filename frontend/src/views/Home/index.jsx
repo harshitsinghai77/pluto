@@ -1,45 +1,47 @@
-import React from "react";
 import { Row, Col, Card, Typography } from "antd";
-
+import { Link } from "react-router-dom";
 import Hero from "../../components/Hero";
-import barco from "../../static/Imagenbarco.jpg";
-import styledBarco from "../../static/result_Imagenbarco.jpg";
-import monet from "../../static/monet.jpg";
+import OriginalImage from "../../static/original.png";
+import StyledImage from "../../static/style_img.jpg";
+import ResultImage from "../../static/result.png";
 
 import "./home.css";
 
 const cardsData = [
   {
-    title: "1.Pick a style",
+    title: "1.Pick a image",
     subtitle:
-      "Select among some of the most famous artists around the world. Their style will be transfered.",
-    img: monet,
-    hyperlink: "Showcase",
+      "Upload or paste a link to your personal photo or any other image that your want to transfer the style to.",
+    img: OriginalImage,
+    hyperlinkText: "Showcase",
+    hyperlink: "/showcase",
   },
   {
-    title: "2. Upload your picture",
+    title: "2. Pick a style ",
     subtitle:
-      " Our Machine Learning model will transfer the artist style to your picture.",
-    img: barco,
-    hyperlink: "About",
+      "Upload a picture that will work as the reference to extract the style from. Our Machine Learning model will transfer the style from this picture to the picture uploaded in the first step.",
+    img: StyledImage,
+    hyperlinkText: "About",
+    hyperlink: "/about",
   },
   {
     title: "3. You're an artist!",
     subtitle:
-      " It might take a couple of minutes, because #GPU but... hey, It looks like an actual classical painting.",
-    img: styledBarco,
-    hyperlink: "Try now",
+      " It might take a couple of minutes, because I don't have a #GPU 😥	but... hey, It looks like an actual classical painting once the model is trained.",
+    img: ResultImage,
+    hyperlinkText: "Try now",
+    hyperlink: "/canvas",
   },
 ];
 
-const { Title, Paragraph, Link } = Typography;
+const { Title, Paragraph } = Typography;
 
 function Home() {
   return (
     <>
       <Hero
         title="You are art. You are an artist"
-        subtitle="With help of AI convert your favorite shot into a famous artist’s painting."
+        subtitle="Use AI to convert your favorite shot into any artistic painting."
       />
       <div className="home-container">
         <Title>How it works</Title>
@@ -51,17 +53,14 @@ function Home() {
                 <Card
                   className="card-box"
                   hoverable
-                  // style={{ width: 240, height: 240 }}
-                  cover={
-                    <img alt="example" src={el.img} width="240" height="200" />
-                  }
+                  cover={<img alt="example" src={el.img} height="220" />}
                 >
                   <Card.Meta
                     title={<h2>{el.title}</h2>}
                     description={<h4>{el.subtitle}</h4>}
                   />
                   <Paragraph align="right">
-                    <Link>{el.hyperlink}</Link>
+                    <Link to={el.hyperlink}>{el.hyperlinkText}</Link>
                   </Paragraph>
                 </Card>
               </Col>

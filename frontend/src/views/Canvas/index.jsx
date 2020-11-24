@@ -1,9 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Steps, Button, message, Row, Col, Switch } from "antd";
 import UploadComponent from "../../components/Upload";
 import DemoArtist from "../../components/DemoArtist";
 import ResultScreen from "../../components/ResultScreen";
-import axios from "axios";
 import "./stepper.css";
 
 const { Step } = Steps;
@@ -29,6 +28,10 @@ const Canvas = () => {
   const [loading, setLoading] = useState(false);
 
   const [viaURL, setViaURL] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const next = () => {
     setCurrent(current + 1);
@@ -86,8 +89,9 @@ const Canvas = () => {
 
       setLoading(true);
       next();
-      axios
-        .post("http://0.0.0.0:5000/tf-hub/upload", formData, {
+
+      window.axiosInstance
+        .post("/tf-hub/upload", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
@@ -116,8 +120,9 @@ const Canvas = () => {
 
         setLoading(true);
         next();
-        axios
-          .post("http://0.0.0.0:5000/tf-hub/url", postBody, {
+
+        window.axiosInstance
+          .post("/tf-hub/url", postBody, {
             headers: {
               "Content-Type": "application/json",
             },
@@ -221,16 +226,18 @@ const Canvas = () => {
             {current < steps.length - 1 &&
               current < 2 &&
               (current == 1 ? (
-                <Button type="primary" onClick={() => onSubmit()}>
+                <Button type="primary" size="large" onClick={() => onSubmit()}>
                   Submit
                 </Button>
               ) : (
-                <Button type="primary" onClick={() => next()}>
+                <Button type="primary" size="large" onClick={() => next()}>
                   Next
                 </Button>
               ))}
             {current === steps.length - 1 && current < 2 && (
-              <Button type="primary">Done</Button>
+              <Button type="primary" size="large">
+                Done
+              </Button>
             )}
           </div>
         </Col>

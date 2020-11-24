@@ -11,6 +11,7 @@
 }
 
 .steps-action {
+  text-align: right;
   margin-top: 24px;
 }
 
@@ -19,7 +20,8 @@
 }
 
 .demo-artist {
-  margin: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 6rem;
 }
 
 .switch-style {

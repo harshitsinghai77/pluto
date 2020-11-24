@@ -3,7 +3,7 @@ from flask import Flask,escape,request,Response,g,make_response, jsonify
 from flask_cors import CORS
 from flask.templating import render_template
 from firebase_admin import credentials, initialize_app, storage, firestore
-from backend.model.tf_hub import style_transfer, download_image, save_url_to_database
+from backend.model.tf_v2 import style_transfer, download_image, save_url_to_database
 from backend.model import nst
 from uuid import uuid4
 
@@ -29,7 +29,7 @@ keep_local_img = False    # Set this True to keep images in the tmp folder.
 
 # Initialize firebase application.
 cred = credentials.Certificate(os.path.join(app.root_path, 'keyfiles', 'firebase_credential.json'))
-storage_url = 'mlh-neuro-art.appspot.com'
+storage_url = 'pycharm-neuro.appspot.com'
 initialize_app(cred, {'storageBucket': storage_url})
 firestore_client = firestore.client()
 image_collection = firestore_client.collection('images')
