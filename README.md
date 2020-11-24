@@ -1,8 +1,6 @@
-# <div align="center">Neuro-Art 🎨<div>
+# <div align="center">Pluto 🎨<div>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/MLH-Fellowship/neuro-art/main/assets/home.png" width="70%">
-</p>
+![Screenshot for Pluto](./static/images/pluto_4.png)
 
 <p align="center">
   <a href="https://github.com/MLH-Fellowship/neuro-art/graphs/commit-activity">
