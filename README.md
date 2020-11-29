@@ -102,4 +102,4 @@ Here is a working live demo video :
 
 ## License
 
-You can read the MIT License here
+You can read the MIT License [here](https://github.com/harshitsinghai77/jetBrains-PyChamps-hackathon/blob/master/LICENSE)
