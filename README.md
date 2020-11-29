@@ -64,7 +64,7 @@ Here is a working live demo video :
 
 [![Demo](./static/images/video_thumbnail.png)](https://www.youtube.com/watch?v=dFUJv7JqiEE&t=3s&ab_channel=HarshitSinghai)
 
-## Screenshot
+## Screenshots
 
 ![Screenshot for Pluto](./static/images/pluto_4.png)
 ![Screenshot for Pluto](./static/images/pluto_8.png)
