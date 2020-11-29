@@ -22,6 +22,7 @@
   <a href="#Motivation">Motivation</a> •
   <a href="#Usage">Usage</a> •
   <a href="#Demo">Demo</a> •
+  <a href="#Screenshots">Screenshots</a> •
   <a href="#Built-with ">Built with </a> •
   <a href="#Team">Team</a> •
   <a href="#license">License</a>
