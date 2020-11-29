@@ -22,9 +22,7 @@
   <a href="#Motivation">Motivation</a> •
   <a href="#Usage">Usage</a> •
   <a href="#Demo">Demo</a> •
-  <a href="#Site">Site</a> •
   <a href="#Built-with ">Built with </a> •
-  <a href="#To-do">To-do</a> •
   <a href="#Team">Team</a> •
   <a href="#license">License</a>
 </p>
