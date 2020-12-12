@@ -14,7 +14,9 @@ function Hero(props) {
           className="mainFeaturedPost"
           style={{
             backgroundImage: `url(${MONET_IMG}`,
+            width: "100%",
             height: "100%",
+            backgroundRepeat: "repeat",
           }}
         >
           {/* Increase the priority of the hero background image */}

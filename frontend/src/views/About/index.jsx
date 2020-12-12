@@ -1,27 +1,9 @@
 import { useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Hero from "../../components/Hero";
-import { Row, Col } from "antd";
-import { Typography } from "@material-ui/core";
+import { Row, Col, Typography } from "antd";
 
 import nst_img from "./../../static/nst_example.png";
 import "./about.css";
-
-const useStyles = makeStyles((theme) => ({
-  mainTitle: {
-    margin: "48px 0 24px",
-  },
-  mainText: {
-    margin: "12px 0",
-  },
-  container: {
-    margin: "30px 0",
-  },
-  img: {
-    maxHeight: "300px",
-    maxwidth: "100%",
-  },
-}));
 
 function About() {
   useEffect(() => {
@@ -38,17 +20,19 @@ function About() {
 
       <div className="about_container">
         <Row className="about_mainTitle">
-          <Typography variant="h3">Neural style transfer (NST)</Typography>
+          <Typography.Title level={2}>
+            Neural style transfer (NST)
+          </Typography.Title>
         </Row>
         <Row justify="center">
           <Col md={18} className="about_margin_bottom">
-            <Typography className="about_mainText">
+            <Typography.Title level={5}>
               Neural style transfer is an optimization technique used to take
               two images—a content image and a style reference image (such as an
               artwork by a famous painter)—and blend them together so the output
               image looks like the content image, but “painted” in the style of
               the style reference image.
-            </Typography>
+            </Typography.Title>
           </Col>
         </Row>
 
@@ -60,12 +44,12 @@ function About() {
 
         <Row justify="center">
           <Col md={16} className="about_margin_bottom">
-            <Typography>
+            <Typography.Title level={5}>
               This is implemented by optimizing the output image to match the
               content statistics of the content image and the style statistics
               of the style reference image. These statistics are extracted from
               the images using a convolutional neural network.
-            </Typography>
+            </Typography.Title>
           </Col>
         </Row>
       </div>

@@ -3,19 +3,18 @@ import { Layout, Typography } from "antd";
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      Built with 💙 and a ton of AI by{" "}
+      Built with 💙 and a ton of AI by&nbsp;
       <a href="https://github.com/harshitsinghai77" target="_blank">
         Harshit Singhai
       </a>
-      &nbsp;
-      <a
+      &nbsp;©{new Date().getFullYear()}
+      {/* <a
         color="inherit"
-        href="https://www.hackerearth.com/challenges/hackathon/jetbrains-pychamps/"
+        href="https://github.com/harshitsinghai77"
         target="_blank"
       >
-        @JetBrains PyChamps
-      </a>
-      &nbsp;{new Date().getFullYear()}
+        Github
+      </a> */}
     </Typography>
   );
 }
