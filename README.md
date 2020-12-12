@@ -30,7 +30,7 @@
 
 ## Motivation
 
-Ever since Deep Neural Style Transfer was introduced in 2016 [Neural Style Transfer](https://arxiv.org/abs/1508.06576) by Leon Gatys et al, the world has been fascinated by the creative power of Deep Learning Algorithms. Following the footseps of many people who were curious to build their own implementation and deployment we designed our web application to allow curious people who want to test out NST. Alongside inquisitiveness and diving into the structure of NST our application also lets users leverage the power of to create beautiful art using a varity of paintings. Try it out!
+Ever since Deep Neural Style Transfer was introduced in 2016 [Neural Style Transfer](https://arxiv.org/abs/1508.06576) by Leon Gatys et al, the world has been fascinated by the creative power of Deep Learning Algorithms. Following the footseps of many people who were curious to build their own implementation, we designed Pluto, to make it super easy for people to try our Neural Style Transfer. Alongside inquisitiveness and diving into the structure of NST our application lets users leverage the power of to create beautiful art using any painting from the internet. Try it out!
 
 ## Key-Features
 
